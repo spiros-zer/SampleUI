@@ -19,8 +19,13 @@ html {
 .btn {
   text-decoration: none;
   border: none;
+  background: none;
   /* Temp cursor style*/
   cursor: pointer;
+}
+
+.btn--icon {
   height: 2.4rem;
   width: 2.4rem;
+  color: #333;
 }
