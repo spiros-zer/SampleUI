@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+.hud {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn {
+  text-decoration: none;
+  border: none;
+  /* Temp cursor style*/
+  cursor: pointer;
+  height: 2.4rem;
+  width: 2.4rem;
+}
