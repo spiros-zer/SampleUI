@@ -30,6 +30,7 @@
 
 .section-player-info {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   /*1/6 of vieport height*/
   height: 16vh;
