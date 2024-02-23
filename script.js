@@ -1,12 +1,13 @@
-const hitBtn = document.querySelector(".btn");
-const hBar = document.querySelector(".bar-frame");
-const bar = document.querySelector(".bar");
+const hitBtn = document.querySelectorAll(".btn");
+const hBar = document.querySelectorAll(".bar-frame");
+const bar = document.querySelectorAll(".bar");
 
-hitBtn.addEventListener("click", function (e) {
+const total = 100;
+const value = 100;
+
+// Left button - Change randomly value between 0-100
+hitBtn[0].addEventListener("click", function (e) {
   e.preventDefault;
-
-  const total = document.querySelector("data-total");
-  const value = document.querySelector("data-value");
 
   // max damage is essentially quarter of max life
   const damage = Math.floor(Math.random() * total);
@@ -15,7 +16,12 @@ hitBtn.addEventListener("click", function (e) {
   // calculate the percentage of the total width
   const barWidth = (newValue / total) * 100;
 
-  console.log(barWidth);
+  bar[0].style.width = `${barWidth}%`;
+  bar[1].style.width = `${barWidth}%`;
+});
 
-  bar.style.width = "50%";
+// Right button - Resets value to 100%
+hitBtn[1].addEventListener("click", function () {
+  bar[0].style.width = "100%";
+  bar[1].style.width = "100%";
 });
